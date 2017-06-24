@@ -17,7 +17,8 @@ class GardenPlannerServiceSpec extends WordSpec with Matchers with ScalatestRout
   "GardenPlannerService" should {
     "Accept POST requests with vegetable facts" in {
 
-      val carrot = Vegetable("Carrot", harvest = List(Feb, Mar), sowing = List(Feb), soilPreference = List(Acidic))
+      val carrot =
+        Vegetable(id = None, "Carrot", harvest = List(Feb, Mar), sowing = List(Feb), soilPreference = List(Acidic))
       Post("/vegetable", carrot) ~> vegetable ~> check {
         status === OK
         responseAs[String] shouldBe carrot.toJson.toString

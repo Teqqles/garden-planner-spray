@@ -62,10 +62,12 @@ object SoilType {
 
 }
 
-case class Vegetable(name: String, sowing: List[MonthOfYear.Month],
+case class Vegetable(id: Option[Int],
+                     name: String,
+                     sowing: List[MonthOfYear.Month],
                      harvest: List[MonthOfYear.Month],
                      soilPreference: List[SoilType.Soil])
 
 object ImplicitVegetableJson extends DefaultJsonProtocol with SprayJsonSupport {
-  implicit val vegJson: RootJsonFormat[Vegetable] = jsonFormat4(Vegetable.apply)
+  implicit val vegJson: RootJsonFormat[Vegetable] = jsonFormat5(Vegetable.apply)
 }
