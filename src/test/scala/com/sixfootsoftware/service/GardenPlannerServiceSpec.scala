@@ -1,13 +1,14 @@
-package com.sixfootsoftware
+package com.sixfootsoftware.service
 
-import spray.testkit.ScalatestRouteTest
-import spray.http._
-import StatusCodes._
-import com.sixfootsoftware.MonthOfYear.{Feb, Mar}
-import com.sixfootsoftware.SoilType.Acidic
+import com.sixfootsoftware.model.MonthOfYear.{Feb, Mar}
+import com.sixfootsoftware.model.SoilType.Acidic
+import com.sixfootsoftware.model.Vegetable
+import com.sixfootsoftware.model.ImplicitVegetableJson._
 import org.scalatest.{Matchers, WordSpec}
+import spray.http.StatusCodes._
+import spray.http._
 import spray.json._
-import ImplicitVegetableJson._
+import spray.testkit.ScalatestRouteTest
 
 class GardenPlannerServiceSpec extends WordSpec with Matchers with ScalatestRouteTest with GardenPlannerService {
 

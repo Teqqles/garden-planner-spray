@@ -1,10 +1,10 @@
-package com.sixfootsoftware
+package com.sixfootsoftware.service
 
 import akka.actor.Actor
-import spray.routing._
+import com.sixfootsoftware.model.ImplicitVegetableJson._
+import com.sixfootsoftware.model.Vegetable
 import spray.json._
-import spray.http._
-import ImplicitVegetableJson._
+import spray.routing._
 
 // we don't implement our route structure directly in the service actor because
 // we want to be able to test it independently, without having to spin up an actor

@@ -4,7 +4,7 @@ organization  := "com.sixfootsoftware"
 
 version       := "0.1"
 
-scalaVersion  := "2.11.6"
+scalaVersion  := "2.11.8"
 
 crossPaths := false
 
@@ -20,7 +20,9 @@ libraryDependencies ++= {
     "io.spray"            %%  "spray-testkit" % sprayV  % "test",
     "com.typesafe.akka"   %%  "akka-actor"    % akkaV,
     "com.typesafe.akka"   %%  "akka-testkit"  % akkaV   % "test",
-    "org.scalatest"          %%  "scalatest"   % "3.0.1" % "test"
+    "org.scalatest"       %%  "scalatest"     % "3.0.1" % "test",
+    "com.typesafe.slick"  %%  "slick"         % "3.0.0",
+    "org.slf4j"           %   "slf4j-nop"     % "1.6.4"
   )
 }
 

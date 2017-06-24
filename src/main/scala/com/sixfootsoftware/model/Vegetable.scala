@@ -1,4 +1,4 @@
-package com.sixfootsoftware
+package com.sixfootsoftware.model
 
 import spray.httpx.SprayJsonSupport
 import spray.json._
