@@ -1,0 +1,10 @@
+slick.codegen.SourceCodeGenerator.main(
+  Array(
+  "slick.driver.MySQLDriver",
+   "com.mysql.jdbc.driver",
+   "jdbc:mysql://localhost/gardenplanner?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false&nullNamePatternMatchesAll=true",
+   "./src/main/scala/",
+   "com.sixfootsoftware.repo",
+   "gardenplanner",
+   "gardenplanner")
+)
