@@ -1,8 +1,11 @@
 package com.sixfootsoftware.service
 
 import akka.actor.Actor
+import com.sixfootsoftware.config.DbConfiguration
+import com.sixfootsoftware.handler.VegetableHandler
 import com.sixfootsoftware.model.ImplicitVegetableJson._
 import com.sixfootsoftware.model.Vegetable
+import slick.driver.MySQLDriver
 import spray.json._
 import spray.routing._
 
@@ -34,6 +37,8 @@ trait GardenPlannerService extends HttpService {
       post {
         entity(as[Vegetable]) { vegetable =>
           complete {
+            val veg = new VegetableHandler(MySQLDriver) with DbConfiguration
+            println(veg.list)
             vegetable.toJson.toString()
           }
         }
